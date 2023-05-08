@@ -1,0 +1,25 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+    encoding:
+      charset: utf-8
+      enabled: true
+spring:
+  datasource:
+    driver-class-name:
+    url: jdbc:mariadb://192.168.1.224:3306/login_test?characterEncoding=UTF-8&serverTimezone=UTC
+    username: gbdev
+    password: Gbgbgb032!
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        default_batch_fetch_size: 1000
+    hibernate:
+      ddl-auto: create
+
+# jwt.secret.key의 값은 256bit 이상이어야 합니다.
+jwt:
+  secret:
+    key: N1U8E0Ybu5Ki+/NPXvp1FOaKQXnPi+ADlIX3HhNT+eqLhWbE884SJ2viLZ5x7qwR+QzXjzQf/4eHNIM0d0fs6w==
